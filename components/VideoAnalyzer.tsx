@@ -262,9 +262,18 @@ export default function VideoAnalyzer() {
                 브라우저가 비디오를 지원하지 않습니다.
               </video>
             </div>
-            <p className="text-slate-500 text-xs mt-2 text-center">
-              분석할 장면에서 ⏸ 일시정지한 뒤 아래 '화면 분석' 버튼을 누르세요
-            </p>
+            <div className="flex items-center justify-between mt-2">
+              <p className="text-slate-500 text-xs">
+                분석할 장면에서 ⏸ 일시정지한 뒤 아래 '화면 분석' 버튼을 누르세요
+              </p>
+              <a
+                href={videoSrc}
+                download={`${videoInfo?.title ?? "video"}.mp4`}
+                className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-300 hover:text-white text-xs font-medium transition whitespace-nowrap"
+              >
+                ⬇ 다운로드
+              </a>
+            </div>
           </section>
         )}
 
