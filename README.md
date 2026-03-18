@@ -1,4 +1,4 @@
-# YouTube 캡쳐 프레임 VLM 분석기
+# YouTube 다운로드 및 프레임 캡쳐 VLM 분석기
 
 Qwen3.5-2B 멀티모달 언어 모델(WebGPU)을 활용하여 YouTube 영상의 특정 화면을 AI로 분석하는 웹 애플리케이션입니다.
 영상을 일시정지한 뒤 원하는 프롬프트를 입력하면, 브라우저 내에서 직접 GPU 추론이 실행되어 결과를 반환합니다.
@@ -13,7 +13,7 @@ Qwen3.5-2B 멀티모달 언어 모델(WebGPU)을 활용하여 YouTube 영상의 
 | UI | React 18, Tailwind CSS |
 | VLM 모델 | Qwen3.5-2B-ONNX |
 | 모델 추론 | @huggingface/transformers v3 (WebGPU) |
-| YouTube 스트리밍 | youtube-dl-exec / yt-dlp (서버 사이드 프록시) |
+| YouTube 스트리밍 / 다운로드 | youtube-dl-exec / yt-dlp (서버 사이드 프록시) |
 
 ---
 
@@ -113,11 +113,12 @@ http://localhost:3000
 
 ---
 
-### Step 2 — 영상 재생 및 일시정지
+### Step 2 — 영상 재생 및 다운로드
 
 1. 플레이어에서 영상을 재생합니다
 2. 분석하고 싶은 장면에서 ⏸ **일시정지**
 3. 일시정지 상태에서만 "화면 분석" 버튼이 활성화됩니다
+4. 플레이어 우측 하단 **⬇ 다운로드** 버튼을 클릭하면 영상을 mp4 파일로 저장할 수 있습니다
 
 ---
 
